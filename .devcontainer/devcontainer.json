@@ -14,8 +14,14 @@
       ]
     }
   },
-  "forwardPorts": [5432],
-  "features":{},
+  "forwardPorts": [
+    5432
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "moby": false
+    }
+  },
   "onCreateCommand": "echo >> ~/.bashrc && echo PS1='\"$ \"' >> ~/.bashrc",
   "postAttachCommand": "git pull --all"
 }
